@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="CardGames.UI.Views.War.WarHandPlayerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CardGames.UI.Views.War"
+             xmlns:Enums="clr-namespace:CardGames.UI.Enums"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.10*"/>
+            <ColumnDefinition Width="0.10*"/>
+            <ColumnDefinition Width="0.55*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column ="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row = "1" Grid.Column = "1"  Name="Collect"
+                    BorderBrush="OrangeRed"
+                    BorderThickness="1" 
+                    Background="DarkOrange"
+                    CommandParameter="{Binding UserIndex}"
+                    Command="{Binding Collect}">
+                <TextBlock TextWrapping="Wrap"> Collect cards</TextBlock>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+                        <Style.Triggers>
+                            <Trigger Property="IsEnabled" Value="False" >
+                                <Setter Property="Visibility" Value="Collapsed"  />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBlock Grid.Row = "0" Grid.Column = "1" TextWrapping="Wrap" Text="{Binding PlayerNameHeadline}"></TextBlock>
+            <TextBlock Grid.Row = "0" Grid.Column = "2" TextWrapping="Wrap" Text="{Binding UserSpecificGameText}"></TextBlock>
+
+        </Grid>
+        <Grid Grid.Column ="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="15*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row = "1" Grid.Column = "1" Name="PlaceCardFromDeckOnTable" 
+                        BorderBrush="Transparent"
+                        BorderThickness="0" 
+                        CommandParameter="{Binding UserIndex}"
+                        Command="{Binding PlaceCardFromDeckOnTable}">
+                <Image x:Name="MainPileImage" Source="{Binding MainPileImage}"></Image>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+        <Grid Grid.Column ="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="88*"/>
+                <RowDefinition Height="6*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row = "1" Grid.Column = "1" Name="MoveCardsFromSecondaryPileToMainPile" 
+                        BorderBrush="Transparent"
+                        BorderThickness="0" 
+                        CommandParameter="{Binding UserIndex}"
+                        Command="{Binding MoveCardsFromSecondaryPileToMainPile}">
+                <Image x:Name="SecondaryPileImage" Source="{Binding SecondaryPileImage}"></Image>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                    </Style>
+                </Button.Style>
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

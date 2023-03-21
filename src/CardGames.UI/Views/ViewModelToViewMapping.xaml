@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:views="clr-namespace:CardGames.UI.Views"
+                    xmlns:viewsWar="clr-namespace:CardGames.UI.Views.War"
+                    xmlns:viewModels="clr-namespace:CardGames.UI.ViewModels"
+                    xmlns:viewModelsWar="clr-namespace:CardGames.UI.ViewModels.War">
+
+
+    <DataTemplate DataType="{x:Type viewModelsWar:WarCardsOnTableViewModel}">
+        <viewsWar:WarCardsOnTablePlayerView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModelsWar:WarHandViewModel}">
+        <viewsWar:WarHandPlayerView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModelsWar:WarPileOfWarCardsViewModel}">
+        <viewsWar:WarPileOfWarCardsView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModelsWar:WarMainViewModel}">
+        <viewsWar:WarMainView/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type viewModels:StartPageViewModel}">
+        <views:StartPageView/>
+    </DataTemplate>
+</ResourceDictionary>
