@@ -34,6 +34,12 @@ This game has been made primarily to train my WPF skils. Focus has been on the U
   - Use small methods (and classes) with limited responsibility each (this approach is not followed all the time..)
   - Make method and parameter names as descriptive as possible
   - No Boolean input parameters used as input to methods
+
+- SOLID:
+  - (Most) game logic is handled by the game engine in the CardGames.War project. 
+  - Handling of events from user is handled by the Views models. 
+  - Buttons are made available/disable via the “CanExecute” method in the ICommand interface
+  - UI is handled by the views
 -	SOLID:
   -	Single responsibility principle (small methods and classes with only limited responsibility) is preferred. However not done all the time. 
   -	Open/closed principle. Not using this approach as this is new code. 
