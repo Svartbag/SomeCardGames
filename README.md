@@ -29,8 +29,8 @@ This game has been made primarily to train my WPF skils. Focus has been on the U
 -	The nuget package EluciusFTW.CardGames.Core.French is used for providing core functionality regarding cards.
 
 ## Some of the design guidelines I try to follow in this project
--	Clean code approach:
-  -	LINQ is preferred over foreach/for loops 
+- Clean code approach:
+  - LINQ is preferred over foreach/for loops 
   - Use small methods (and classes) with limited responsibility each (this approach is not followed all the time..)
   - Make method and parameter names as descriptive as possible
   - No Boolean input parameters used as input to methods
