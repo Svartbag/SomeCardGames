@@ -13,11 +13,11 @@ The 2 players have a pile of cards each. Each player pick the card on top of the
 This game has been made primarily to train my WPF skils. Focus has been on the UI part and how to create an MVVM pattern in a good way. Focus has not been on making a fully functional and robust game. For now start/stop game and game play works -for the "War" game. Users are predefined but can be changed via config file. Also possible to adjust some of the game play parameters as well in the config file. Not possible to save or open game in this first version.
 - WPF is used as UI. 
 - MVVM pattern with ViewModel First approach is used for the :
-  -- (Most) game logic is handled by the game engine in the CardGames.War project. 
-  -- Handling of events from user is handled by the Views models. 
-  -- Buttons are made available/disable via the “CanExecute” method in the ICommand interface
-  -- UI is handled by the views
-  -- Views are bound to the View models in a separate xaml file (View Model First approach).
+  - (Most) game logic is handled by the game engine in the CardGames.War project. 
+  - Handling of events from user is handled by the Views models. 
+  - Buttons are made available/disable via the “CanExecute” method in the ICommand interface
+  - UI is handled by the views
+  - Views are bound to the View models in a separate xaml file (View Model First approach).
 - GameEngine is used by the view models. Same instance of the game engine is used for all View models. In this way they can all modify and get feedback from the same game engine.
 - Dependency injection (using an IOC container) is used. For this app the Autofac framework is used. 
 - Views are split up in several views (user controls), which are responsible for different areas on the screen. 
