@@ -13,17 +13,17 @@ The 2 players have a pile of cards each. Each player pick the card on top of the
 Some more descriptions and thoughts about the game:
 
 This game has been made primarily to train my WPF skils. Focus has been on the UI part and how to create an MVVM pattern in a good way. Focus has not been on making a fully functional and robust game. For now start/stop game and game play works -for the "War" game. Users are predefined but can be changed via config file. Also possible to adjust some of the game play parameters as well in the config file. Not possible to save or open game in this first version.
-•	WPF is used as UI. 
-•	MVVM pattern with ViewModel First approach is used for the :
-  o	(Most) game logic is handled by the game engine in the CardGames.War project. 
-  o	Handling of events from user is handled by the Views models. 
-  o	Buttons are made available/disable via the “CanExecute” method in the ICommand interface
-  o	UI is handled by the views
-  o	Views are bound to the View models in a separate xaml file (View Model First approach).
-•	GameEngine is used by the view models. Same instance of the game engine is used for all View models. In this way they can all modify and get feedback from the same game engine.
-•	Dependency injection (using an IOC container) is used. For this app the Autofac framework is used. 
-•	Views are split up in several views (user controls), which are responsible for different areas on the screen. 
-•	Views + view models are reused (same view used for 2 different places on the screen. Same logic but with different data because different corresponding view model instances are used).
+- WPF is used as UI. 
+- MVVM pattern with ViewModel First approach is used for the :
+  1. (Most) game logic is handled by the game engine in the CardGames.War project. 
+  2. Handling of events from user is handled by the Views models. 
+  3. Buttons are made available/disable via the “CanExecute” method in the ICommand interface
+  4. UI is handled by the views
+  5. Views are bound to the View models in a separate xaml file (View Model First approach).
+- GameEngine is used by the view models. Same instance of the game engine is used for all View models. In this way they can all modify and get feedback from the same game engine.
+- Dependency injection (using an IOC container) is used. For this app the Autofac framework is used. 
+- Views are split up in several views (user controls), which are responsible for different areas on the screen. 
+- Views + view models are reused (same view used for 2 different places on the screen. Same logic but with different data because different corresponding view model instances are used).
 
 •	A mediator pattern is used for communication between classes. Prism EventAgregator is used to facilitate this. 
 •	Prism is used for implementing the ICommand interface for buttons.
