@@ -11,7 +11,7 @@ The 2 players have a pile of cards each. Each player pick the card on top of the
 
 ## Some descriptions and thoughts about the game
 This game has been made primarily to train my WPF skils. Focus has been on the UI part and how to create an MVVM pattern in a good way. Focus has not been on making a fully functional and robust game. For now start/stop game and game play works -for the "War" game. Users are predefined but can be changed via config file. Also possible to adjust some of the game play parameters as well in the config file. Not possible to save or open game for now.
-- WPF is used for creating the UI.
+- Game is made as a WPF project
 - MVVM pattern with ViewModel First approach is used for the UI handling:
   - (Most) game logic is handled by the game engine in the CardGames.War project. 
   - Handling of events from user is handled by the Views models. 
