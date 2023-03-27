@@ -9,7 +9,7 @@ Play various card games. For now only "War" game is available and can be selecte
 ##  Game play
 The 2 players have a pile of cards each. Each player pick the card on top of the pile and place it on the table (done by simply clicking on the card pile's with left mouse click). The 2 cards are then compared. The player with the highest card wins both of the cards. If the cards are similar (As default similar = +/- 1 in difference -can be changed in the settings in code) there is "War". Now both players select 4 cards from the top of the pile and place them on the table (done by clicking on the each of piles of cards). The cards to the very right is now compared. The player who has the higest of these cards to the very right now wins all the cards. The game is now continuing until a player has won all the cards (the amount of cards needed in order to win can be changed easily in the settings in the code). 
 
-## Some more descriptions and thoughts about the game
+## Some descriptions and thoughts about the game
 This game has been made primarily to train my WPF skils. Focus has been on the UI part and how to create an MVVM pattern in a good way. Focus has not been on making a fully functional and robust game. For now start/stop game and game play works -for the "War" game. Users are predefined but can be changed via config file. Also possible to adjust some of the game play parameters as well in the config file. Not possible to save or open game in this first version.
 - WPF is used as UI. 
 - MVVM pattern with ViewModel First approach is used for the:
