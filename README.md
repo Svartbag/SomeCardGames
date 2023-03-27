@@ -1,13 +1,13 @@
 # Card Games application
 Play various card games. For now only "War" game is available and can be selected. Have fun :)
 
+##  Game play
+The 2 players have a pile of cards each. Each player pick the card on top of the pile and place it on the table (done by clicking on the card pile's with left mouse click). The 2 cards are then compared. The player with the highest card wins both of the cards. Cards are collected by clicking on the "Collect cards" button which appears. If the cards are similar (As default similar = +/- 1 in difference) there is "War". Now both players pick the 4 next cards from their card pile and place them on the table (done by clicking on the card piles). The cards to the very right on the table are now compared. The player who has the higest of these cards now wins all the cards on the table. In this way the game will continue until a player has won all the cards. The amount of cards needed in order to win can be adjusted in a config file in the code. 
+
 ## How to start the game: 
 1. Open Visual Studio
 2. Set CardGames.UI as startup project
 3. Start program (Debug -> Start Debugging)
-
-##  Game play
-The 2 players have a pile of cards each. Each player pick the card on top of the pile and place it on the table (done by clicking on the card pile's with left mouse click). The 2 cards are then compared. The player with the highest card wins both of the cards. Cards are collected by clicking on the "Collect cards" button which appears. If the cards are similar (As default similar = +/- 1 in difference) there is "War". Now both players pick the 4 next cards from their card pile and place them on the table (done by clicking on the card piles). The cards to the very right on the table are now compared. The player who has the higest of these cards now wins all the cards on the table. In this way the game will continue until a player has won all the cards. The amount of cards needed in order to win can be adjusted in a config file in the code. 
 
 ## Some descriptions and thoughts about the game
 This game has been made primarily to train my WPF skils. Focus has been on the UI part and how to create an MVVM pattern in a good way. Focus has not been on making a fully functional and robust game. For now start/stop game and game play works -for the "War" game. Users are predefined but can be changed via config file. Also possible to adjust some of the game play parameters as well in the config file. Not possible to save or open game for now.
