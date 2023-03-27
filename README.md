@@ -31,13 +31,13 @@ This game has been made primarily to train my WPF skils. Focus has been on the U
 ## Some of the design guidelines I try to follow in this project
 -	Clean code approach:
   1. LINQ is preferred over foreach/for loops 
-  2	Use small methods (and classes) with limited responsibility each (this approach is not followed all the time..)
+  2. Use small methods (and classes) with limited responsibility each (this approach is not followed all the time..)
   3. Make method and parameter names as descriptive as possible
   4. No Boolean input parameters used as input to methods
 -	SOLID:
-   1.	Single responsibility principle (small methods and classes with only limited responsibility) is preferred. However not done all the time. 
-   2.	Open/closed principle. Not using this approach as this is new code. 
-   3.	Liskov: This is used sometimes. For instance in the CardGameFactory. The factory can return several kind of classes. However as long as they all implements the   IVewModelBaseWrapper interface (which is the return type), they are all IVewModelBaseWrapper’s an can all be used as return values. Actually the IWarMainViewModel is casted to be a IviewModelBaseWrapper interface, but that works fine. Because warMainViewModel both implements the IwarMainViewModel and the IviewModelBaseWrapper interface.
+  1.	Single responsibility principle (small methods and classes with only limited responsibility) is preferred. However not done all the time. 
+  2.	Open/closed principle. Not using this approach as this is new code. 
+  3.	Liskov: This is used sometimes. For instance in the CardGameFactory. The factory can return several kind of classes. However as long as they all implements the   IVewModelBaseWrapper interface (which is the return type), they are all IVewModelBaseWrapper’s an can all be used as return values. Actually the IWarMainViewModel is casted to be a IviewModelBaseWrapper interface, but that works fine. Because warMainViewModel both implements the IwarMainViewModel and the IviewModelBaseWrapper interface.
    4.	Interface segregation: Good idea to split responsibilities between interfaces. However I prefer to only use 1 interface pr class. Makes it easier to do dependency injection. In one situation I therefore wrapped 2 interfaces into 1 interface in order to be able to use only 1 interface for my class. 
    5.	dependency injection / dependency inversion: Used that all the time. I use interfaces all the time in stead of instances. This makes the code more testable
    
