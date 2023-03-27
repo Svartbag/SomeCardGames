@@ -4,7 +4,7 @@ Play various card games. For now only "War" game is available and can be selecte
 ##  Game play
 The 2 players have a pile of cards each. Each player pick the card on top of the pile and place it on the table (done by clicking on the card pile's with left mouse click). The 2 cards are then compared. The player with the highest card wins both of the cards. Cards are collected by clicking on the "Collect cards" button which appears. If the cards are similar (As default similar = +/- 1 in difference) there is "War". Now both players pick the 4 next cards from their card pile and place them on the table (done by clicking on the card piles). The cards to the very right on the table are now compared. The player who has the higest of these cards now wins all the cards on the table. In this way the game will continue until a player has won all the cards. The amount of cards needed in order to win can be adjusted in a config file in the code. 
 
-## How to start the game: 
+## How to start the game
 1. Open Visual Studio
 2. Set CardGames.UI as startup project
 3. Start program (Debug -> Start Debugging)
