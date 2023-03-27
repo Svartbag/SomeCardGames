@@ -1,5 +1,5 @@
 # Card Games application
-Play various card games. For now only "War" game is available and can be selected. 
+Play various card games. For now only "War" game is available and can be selected. Have fun :)
 
 ## How to start the game: 
 1. Open Visual Studio
